@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1,maximum-scale=1, user-scalable=no">
+<meta name="apple-mobile-web-app-capable" content="yes">
+<meta name="apple-mobile-web-app-status-bar-style" content="black">
+<meta name="format-detection" content="telephone=no">
+<title>招聘</title>
+<link rel="stylesheet" type="text/css" href="css/font-awesome.min.css"/>
+<link rel="stylesheet" type="text/css" href="css/weui.min.css"/>
+<link rel="stylesheet" type="text/css" href="css/jquery-weui.min.css"/>
+<link rel="stylesheet" type="text/css" href="css/common.css"/>
+<link rel="stylesheet" type="text/css" href="css/recruit.css"/>
+<style type="text/css">
+.personal-data{
+	padding-top: 40px;
+}
+.weui_cell input[name=gr]{
+	margin-right: 6px;
+	margin-left: 4px;
+}
+</style>
+</head>
+
+<body>
+<div class="personal-data">
+	<header>
+		<a href="javascript:;" onclick="window.history.go(-1)"><i class="fa fa-angle-left"></i></a>
+		<h1 class="title">个人资料</h1>
+	</header>
+	<div class="weui_cells weui_cells_form">
+	  	<div class="weui_cell">
+	    	<div class="weui_cell_hd"><label class="weui_label">姓　　名:</label></div>
+	    	<div class="weui_cell_bd weui_cell_primary"><input class="weui_input" type="text" placeholder="请输入您的姓名" /></div>
+	  	</div>
+	  	<div class="weui_cell">
+	    	<div class="weui_cell_hd"><label class="weui_label">性　　别:</label></div>
+	    	<div class="weui_cell_bd weui_cell_primary">
+	    		<label>男<input type="radio" name="gr" class="checkbox" /></label>
+	    		<label>女<input type="radio" name="gr" class="checkbox" /></label>
+	    	</div>
+	  	</div>
+	  	<div class="weui_cell">
+	    	<div class="weui_cell_hd"><label class="weui_label">出生年月:</label></div>
+	    	<div class="weui_cell_bd weui_cell_primary"><input class="weui_input" type="text" id="my-birthday" placeholder="请选择出生年月"></div>
+	  	</div>
+	  	<div class="weui_cell">
+	    	<div class="weui_cell_hd"><label class="weui_label">现居住地:</label></div>
+	    	<div class="weui_cell_bd weui_cell_primary"><input class="weui_input" type="text" placeholder="请输入您现居地"></div>
+	  	</div>
+	  	<div class="weui_cell">
+	    	<div class="weui_cell_hd"><label class="weui_label">籍　　贯:</label></div>
+	    	<div class="weui_cell_bd weui_cell_primary"><input class="weui_input" type="text" id="city-picker" placeholder="请选择您的籍贯"></div>
+	  	</div>
+	  	<div class="weui_cell">
+	    	<div class="weui_cell_hd"><label class="weui_label">到岗时间:</label></div>
+	    	<div class="weui_cell_bd weui_cell_primary"><input class="weui_input" type="text" id="jobtime" placeholder="请选择您的到岗时间"></div>
+	  	</div>
+	  	<div class="weui_cell">
+	    	<div class="weui_cell_hd"><label class="weui_label">工作年限:</label></div>
+	    	<div class="weui_cell_bd weui_cell_primary"><input class="weui_input" type="text" id="working-life" placeholder="请选择您的工作年限"></div>
+	  	</div>
+	  	<div class="weui_cell">
+	    	<div class="weui_cell_hd"><label class="weui_label">最高学历:</label></div>
+	    	<div class="weui_cell_bd weui_cell_primary"><input class="weui_input" type="text" id="education" placeholder="请选择您的学历"></div>
+	  	</div>
+	  	<div class="weui_cell">
+	    	<div class="weui_cell_hd"><label class="weui_label">身份证号:</label></div>
+	    	<div class="weui_cell_bd weui_cell_primary"><input class="weui_input" type="text" placeholder="请输入您的身份证号"></div>
+	  	</div>
+	  	<div class="weui_cell">
+	    	<div class="weui_cell_hd"><label class="weui_label">电子邮箱:</label></div>
+	    	<div class="weui_cell_bd weui_cell_primary"><input class="weui_input" type="text" placeholder="请输入您的邮箱"></div>
+	  	</div>
+	</div>
+	<input type="button" class="submit" value="保存" />
+</div>
+
+<script type="text/javascript" src="js/jquery.min.js"></script>
+<script type="text/javascript" src="js/city-picker.min.js"></script>
+<script type="text/javascript" src="js/jquery-weui.min.js"></script>
+<script type="text/javascript" src="js/cloud.js"></script>
+<script>
+	$("#my-birthday").calendar();
+	$("#jobtime").select({
+	  	title: "到岗时间",
+		items: ["随时上岗", "一周以内", "一月以内", "其他"]
+	});
+	$("#working-life").select({
+	  	title: "到岗时间",
+		items: ["应届", "1年一下", "3-5年", "5-10年","10-25年","25年以上"]
+	});
+	
+	$("#education").select({
+	  	title: "到岗时间",
+		items: ["初中", "高中", "专科", "本科","硕士","博士","博士以上"]
+	});
+	$("#city-picker").cityPicker({
+		showDistrict: false
+	});
+</script>
+</body>
+</html>

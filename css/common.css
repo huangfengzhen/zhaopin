@@ -1,0 +1,71 @@
+@charset "utf-8";
+/* CSS Document */
+.space10{margin-top:10px}
+.space50{margin-top:50px}
+.space60{margin-top:60px}
+.space80{margin-top:80px}
+/*******************/
+.font_12{font-size:12px !important}
+.font_14{font-size:14px !important}
+.font_16{font-size:16px !important}
+.font_18{font-size:18px !important}
+/*********************/
+.white{color: #fff !important;}
+.green{color:#28a267 !important}
+.red{color:#EF4437 !important}
+.blue{color:#1e90ff !important}
+.gray{color:#959595 !important}
+.yellow{color:#ffff00 !important}
+.orange{color:#F06D1B !important}
+.hui{color:#555 !important}
+.deephui{color:#a9a8a8 !important}
+.pink{color:#ff7994 !important}
+.mainred{color:#ef4437 !important;}
+.black{color:#000 !important;}
+/***********************/
+.width1{width:100%}
+.width2{width:50%}
+.width3{width:33.3%;font-size:10px}
+.mengban{width:100%;height:100%;background-color:#000;opacity:0.3;position:fixed;z-index:100;top:0;left:0}
+.copyright{width:100%;background-color:#fff;border-top:1px solid #eee;margin-top:10px;font-size:0.7rem;text-align:center;line-height:1.5rem}
+.bar-tab .newactive{color:#ef4437}
+input[type=submit],input.submit{background-color:#F06D1B;color:#fff;padding:8px !important;border-radius:4px !important;width:100%;font-size:.8rem;width:90%;margin:10px 5%}
+.line{height:1px;background-color:#eee;width:100%}
+.left{float:left}
+.right{float:right}
+.section{background-color:#fff;border-top:1px solid #ccc;padding:0 0 0 10px;margin-bottom:10px;font-size:.7rem}
+.section a{border-bottom:1px solid #EFEFEF;color:#777;display:block;padding:10px 0;}
+.section i{width:24px;height:24px;border-radius:4px;text-align:center;line-height:24px;color:#929292;margin-right:6px;font-size:.8rem}
+.statue-btn-red{color:#ef4437 !important;border:1px solid #ef4437 !important;}
+.statue-btn-green{color:#28a267 !important;border:1px solid #28a267 !important;}
+.statue-btn-gray{color:#dbdbdb !important;border:1px solid #dbdbdb !important;}
+.statue-btn-blue{color:#34afbe !important;border:1px solid #34afbe !important}
+/********************/
+.footer{position: fixed;bottom: 0;display: table;width: 100%;height: 50px;background-color: #f7f7f8;z-index: 100;box-shadow: 0 0 4px #ccc;}
+.footer a{display: table-cell;width: 1%;text-align: center;color: #929292;}
+.footer .fa{top: .1rem;height: 1.2rem;font-size: 16px;line-height: 1.2rem;padding-top: 0;padding-bottom: 0;}
+.footer .tab-label{display: block;font-size: 12px;position: relative;top: 1px;}
+.footer .active{color: #F06D1B;}
+/********************/
+article, aside, details, figcaption, figure, footer, header, hgroup, menu, nav, section, body, div, h1, h2, h3, h4, h5, h6, hr, p, blockquote, dl, dt, dd, ul, ol, li, pre, fieldset, legend, button, input, textarea, form, th, td{margin:0;padding: 0;}
+/******************/
+header{position: fixed;right: 0;left: 0;top: 0;z-index: 10;height: 2.2rem;padding-right: .5rem;padding-left: .5rem;background-color: #f7f7f8;-webkit-backface-visibility: hidden;backface-visibility: hidden;}
+header a:first-child{color: #F06D1B;font-size: 16px;line-height: 2.2rem;display: block;position: relative;z-index: 10;float: left;}
+header .fa{font-size: 1.2rem;margin-right: 6px;display: inline-block;line-height: 2.2rem;}
+header .title{position: absolute;display: block;width: 100%;padding: 0;margin: 0 -.5rem;font-size: .85rem;font-weight: 500;line-height: 2.2rem;color: #3d4145;text-align: center;white-space: nowrap;top: 0;}
+header .button-link{top: 0;padding: 0;font-size: .8rem;line-height: 2.2rem;height: 2.2rem;color: #0894ec;border: 0;position: relative;float: right;color: #F06D1B;}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

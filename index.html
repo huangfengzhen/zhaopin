@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1,maximum-scale=1, user-scalable=no">
+<meta name="apple-mobile-web-app-capable" content="yes">
+<meta name="apple-mobile-web-app-status-bar-style" content="black">
+<meta name="format-detection" content="telephone=no">
+<title>招聘</title>
+<link rel="stylesheet" type="text/css" href="css/font-awesome.min.css"/>
+<link rel="stylesheet" type="text/css" href="css/weui.min.css"/>
+<link rel="stylesheet" type="text/css" href="css/jquery-weui.min.css"/>
+<link rel="stylesheet" type="text/css" href="css/common.css"/>
+<link rel="stylesheet" type="text/css" href="css/recruit.css"/>
+</head>
+
+<body>
+<div class="recruit">
+	<div class="weui-pull-to-refresh-layer">
+	    <div class="pull-to-refresh-arrow"></div> <!-- 上下拉动的时候显示的箭头 -->
+	    <div class="pull-to-refresh-preloader"></div> <!-- 正在刷新的菊花 -->
+	    <div class="down">下拉刷新</div><!-- 下拉过程显示的文案 -->
+	    <div class="up">释放刷新</div><!-- 下拉超过50px显示的文案 -->
+	    <div class="refresh">正在刷新...</div><!-- 正在刷新时显示的文案 -->
+  	</div>
+	<div class="update-time"><span id="time">2016-8-22 10:00 星期一</span></div>
+	<ul>
+		<li>
+			<a href="recruit-details.html">
+				<div class="jobs">
+					<div class="name font_16 hui">客户专员</div>
+					<div class="condition">
+						<span class="money red">5000~10000</span>
+						<span>经验不限</span>
+						<span>学历不限</span>
+						<span>深圳市</span>
+					</div>
+				</div>
+				<div class="describe">
+					<img class="logo" src="images/1.jpg" />
+					<div class="company">
+						<div class="company-name">深圳市万达集团有限公司</div>
+						<div class="company-address"><i class="fa fa-map-marker"></i>深圳市福田区车公庙大厦9楼，公交站招商银行大厦，地铁站车公庙</div>
+					</div>
+				</div>
+				<dl class="welfare">
+					<dd>综合过万</dd>
+					<dd>饭补</dd>
+					<dd>车补</dd>
+					<dd>员工关怀</dd>
+					<dd>团建</dd>
+					<dd>包住</dd>
+					<dd>五险一金</dd>
+				</dl>
+			</a>
+		</li>
+		<li>
+			<a href="">
+				<div class="jobs">
+					<div class="name font_16 hui">客户专员</div>
+					<div class="condition">
+						<span class="money red">5000~10000</span>
+						<span>经验不限</span>
+						<span>学历不限</span>
+						<span>深圳市</span>
+					</div>
+				</div>
+				<div class="describe">
+					<img class="logo" src="images/1.jpg" />
+					<div class="company">
+						<div class="company-name">深圳市万达集团有限公司</div>
+						<div class="company-address"><i class="fa fa-map-marker"></i>深圳市福田区车公庙大厦9楼，公交站招商银行大厦，地铁站车公庙</div>
+					</div>
+				</div>
+				<dl class="welfare">
+					<dd>综合过万</dd>
+					<dd>饭补</dd>
+					<dd>车补</dd>
+					<dd>员工关怀</dd>
+					<dd>团建</dd>
+					<dd>包住</dd>
+					<dd>五险一金</dd>
+				</dl>
+			</a>
+		</li>
+	</ul>
+</div>
+
+<script type="text/javascript" src="js/jquery.min.js"></script>
+<script type="text/javascript" src="js/jquery-weui.min.js"></script>
+<script>
+	function time () {
+		var d = new Date();
+		var houer = d.getHours();
+		var mint = d.getMinutes();
+		var week = d.getDay();
+		var arr = ['星期日','星期一','星期二','星期三','星期四','星期五','星期六']
+		var time = null;
+		if(houer<10){
+			houer='0'+houer;
+		}
+		if(mint<10){
+			mint='0'+mint;
+		}
+		time = d.getFullYear()+'-'+(d.getMonth()+1)+'-'+d.getDate()+' '+houer+':'+mint+' ';
+		
+		time+=arr[week];
+		$("#time").text(time);
+		$(document.body).pullToRefreshDone(); // 重置下拉刷新
+	}
+	time();
+	$(document.body).pullToRefresh().on("pull-to-refresh", function() {
+		setTimeout(time,1500); 		
+	});
+</script>
+</body>
+</html>

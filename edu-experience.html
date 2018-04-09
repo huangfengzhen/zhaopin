@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1,maximum-scale=1, user-scalable=no">
+<meta name="apple-mobile-web-app-capable" content="yes">
+<meta name="apple-mobile-web-app-status-bar-style" content="black">
+<meta name="format-detection" content="telephone=no">
+<title>招聘</title>
+<link rel="stylesheet" type="text/css" href="css/font-awesome.min.css"/>
+<link rel="stylesheet" type="text/css" href="css/weui.min.css"/>
+<link rel="stylesheet" type="text/css" href="css/jquery-weui.min.css"/>
+<link rel="stylesheet" type="text/css" href="css/common.css"/>
+<link rel="stylesheet" type="text/css" href="css/recruit.css"/>
+</head>
+
+<body>
+<div class="edu-experience" style="padding-top: 30px;">
+	<header>
+		<a href="javascript:;" onclick="window.history.go(-1)"><i class="fa fa-angle-left"></i></a>
+		<h1 class="title">教育经历</h1>
+		<a href="newedu.html" class="button-link">新增</a>
+	</header>
+	<div class="weui_cells weui_cells_access">
+	  	<div class="weui_cell">
+	    	<div class="weui_cell_hd">
+	    		<p class="font_16">武汉大学</p>
+	    		<p class="font_14 gray">2016-08-17 到 2016-08-24</p>
+	    	</div>
+	    	<div class="weui_cell_ft weui_cell_primary"></div>
+	  	</div>
+	  	<div class="weui_cell">
+	    	<div class="weui_cell_hd">
+	    		<p class="font_16">华中科技大学</p>
+	    		<p class="font_14 gray">2016-08-17 到 2016-08-24</p>
+	    	</div>
+	    	<div class="weui_cell_ft weui_cell_primary"></div>
+	  	</div>
+	</div>
+</div>
+<script type="text/javascript" src="js/jquery.min.js"></script>
+<script type="text/javascript" src="js/jquery-weui.min.js"></script>
+<script>
+	$(".weui_cell").on("touchstart",function(e){
+		e.preventDefault();
+		$.actions({
+		  actions: [{
+		    text: "编辑",
+		    className:"blue",
+		    onClick: function() {
+		      //do something
+		    }
+		  },{
+		    text: "删除",
+		    className:"blue",
+		    onClick: function() {
+		      //do something
+		    }
+		  }]
+		});
+	})
+</script>
+</body>
+</html>

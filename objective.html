@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1,maximum-scale=1, user-scalable=no">
+<meta name="apple-mobile-web-app-capable" content="yes">
+<meta name="apple-mobile-web-app-status-bar-style" content="black">
+<meta name="format-detection" content="telephone=no">
+<title>招聘</title>
+<link rel="stylesheet" type="text/css" href="css/font-awesome.min.css"/>
+<link rel="stylesheet" type="text/css" href="css/weui.min.css"/>
+<link rel="stylesheet" type="text/css" href="css/jquery-weui.min.css"/>
+<link rel="stylesheet" type="text/css" href="css/common.css"/>
+<link rel="stylesheet" type="text/css" href="css/recruit.css"/>
+<style type="text/css">
+.resumes-objective{
+	padding: 50px 0 20px 0;
+}
+</style>
+</head>
+
+<body>
+<div class="resumes-objective">
+	<header>
+		<a href="javascript:;" onclick="window.history.go(-1)"><i class="fa fa-angle-left"></i></a>
+		<h1 class="title">求职意向</h1>
+	</header>
+	<div class="weui_cells weui_cells_form">
+	  	<div class="weui_cell">
+	    	<div class="weui_cell_hd"><label class="weui_label">工作地点:</label></div>
+	    	<div class="weui_cell_bd weui_cell_primary"><input class="weui_input" type="text" placeholder="请输入期望工作地点" /></div>
+	  	</div>
+	  	<div class="weui_cell">
+	    	<div class="weui_cell_hd"><label class="weui_label">期望薪资:</label></div>
+	    	<div class="weui_cell_bd weui_cell_primary"><input class="weui_input" type="text" id="money" placeholder="请选择期望薪资" /></div>
+	  	</div>
+	  	<div class="weui_cell">
+	    	<div class="weui_cell_hd"><label class="weui_label">职位类型:</label></div>
+	    	<div class="weui_cell_bd weui_cell_primary"><input class="weui_input" type="text" id="jobtype" placeholder="请选择期望职位类型" /></div>
+	  	</div>
+	</div>
+</div>
+
+<script type="text/javascript" src="js/jquery.min.js"></script>
+<script type="text/javascript" src="js/jquery-weui.min.js"></script>
+<script type="text/javascript" src="js/cloud.js"></script>
+<script>
+	$("#money").select({
+	  	title: "期望薪资",
+		items: ["面议", "1K以下", "1K~2K","2K~4K","4K~6K","6K~8K","8K~10K","10K~15K","15K~25K","25K以上"]
+	});
+</script>
+</body>
+</html>
